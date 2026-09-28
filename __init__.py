@@ -276,7 +276,7 @@ class ResolutionSelectorMP(IO.ComfyNode):
                     default=16,
                     min=1,
                     max=256,
-                    step=8,
+                    step=1,
                     tooltip=ALIGNMENT_TOOLTIP,
                 ),
                 IO.Boolean.Input(
@@ -390,7 +390,7 @@ class ResolutionAlignToGrid(IO.ComfyNode):
             inputs=[
                 IO.Int.Input("width", default=1920, min=1, max=16384),
                 IO.Int.Input("height", default=1080, min=1, max=16384),
-                IO.Int.Input("alignment", default=16, min=1, max=256, step=8, tooltip=ALIGNMENT_TOOLTIP),
+                IO.Int.Input("alignment", default=16, min=1, max=256, step=1, tooltip=ALIGNMENT_TOOLTIP),
                 IO.Combo.Input(
                     "mode",
                     options=["round", "up", "down"],
